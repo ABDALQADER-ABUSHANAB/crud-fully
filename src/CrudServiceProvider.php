@@ -12,11 +12,7 @@ class CrudServiceProvider extends ServiceProvider
      */
 public function register()
 {
-    if ($this->app->runningInConsole()) {
-        $this->commands([
-            CrudCommand::class,
-        ]);
-    }
+     Artisan::command('crud:generate');
 }
 
     /**
