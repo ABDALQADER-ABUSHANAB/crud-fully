@@ -14,9 +14,9 @@
             "email": "abdmahmod0011@gmail.com"
         }
     ],
-    "require": {}
-
-
+    "require": {
+        "abedalqader/crud-full": "dev-master"
+    }
 }
 
 
