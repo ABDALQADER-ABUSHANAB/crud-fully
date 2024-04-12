@@ -16,7 +16,6 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "abedalqader/crud-full": "dev-master"
     }
 }
 
