@@ -14,7 +14,8 @@
             "email": "abdmahmod0011@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+     "minimum-stability": "dev"
 
 
 }
