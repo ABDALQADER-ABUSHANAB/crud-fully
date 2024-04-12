@@ -1,11 +1,11 @@
 {
-    "name": "abedalqader/crudCommand",
+    "name": "abedalqader/crudcommand",
     "description": "package create crud with all depancis and fullit with data",
     "type": "library",
     "license": "MIT",
 "autoload": {
     "psr-4": {
-        "abdalqader\\crudCommand\\": "src/"
+        "abdalqader\\crudcommand\\": "src/"
     }
 },
     "authors": [
