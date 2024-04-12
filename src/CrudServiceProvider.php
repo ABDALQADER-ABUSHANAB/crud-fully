@@ -20,10 +20,8 @@ public function register()
      */
     public function boot(): void
     {
-        if ($this->app->runningInConsole()) {
         $this->commands([
             CrudCommand::class,
         ]);
-    }
     }
 }
