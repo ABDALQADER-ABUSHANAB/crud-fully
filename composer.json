@@ -1,5 +1,6 @@
 {
     "name": "abedalqader/crudcommand",
+     "version": "1.0.0",
     "description": "package create crud with all depancis and fullit with data",
     "type": "library",
     "license": "MIT",
