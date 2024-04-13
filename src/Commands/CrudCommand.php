@@ -22,7 +22,7 @@ class CrudCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'that command create full crud with all neccsery data controller & model &  requests and seed and fullit with data  ';
 
     /**
      * Execute the console command.
