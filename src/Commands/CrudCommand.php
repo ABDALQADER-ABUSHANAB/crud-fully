@@ -32,7 +32,7 @@ class CrudCommand extends Command
 
         $modelName = text('what is the modelname' ,
         required: true);
-        $columns = text('what are the columns the format name:string,age:integer',
+        $columns = text('what are the columns the format name:string,age:integer , user_id:forginId:users',
             required: true);
         $apiOrBlade = $this->choice('Api Controller or Not Api Controller?', ['Api Controller', 'Not Api Controller']);
 
