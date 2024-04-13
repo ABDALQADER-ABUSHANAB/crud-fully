@@ -1,6 +1,6 @@
 <?php
 
-namespace abdalqader\CrudCommand\Commands;
+namespace abdalqader\crudcommand\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
@@ -72,7 +72,7 @@ class CrudCommand extends Command
             '--resource'=> true,
             '--model' => $modelName,
         ]);
-        foreach (['Create', 'Update'] as $action) {
+        foreach (['Create', 'Update', 'Store'] as $action) {
             $requestName = "{$action}{$modelName}Request";
             $this->call('make:request', [
                 'name' => $requestName,
