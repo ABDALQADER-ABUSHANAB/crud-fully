@@ -160,8 +160,8 @@ class CrudCommand extends Command
 
         $rules = collect($columnsArray)->map(function ($type, $name) {
             if ($type === 'string') {
-                return 'required|string';
-            } elseif ($type === 'integer' || $type === 'int') {
+                return 'required|string|min:8|max:256';
+            } elseif ($type === 'integer' || $type === 'int' || $type === 'float' || $type === 'double') {
                 return 'required|numeric';
             } elseif ($name === 'email') {
                 return 'required|email|unique:users,email';
@@ -169,7 +169,9 @@ class CrudCommand extends Command
                 return 'required|string|min:8|confirmed';
             } elseif ($type === 'date') {
                 return 'required|date';
-            } else {
+            } elseif ($type === 'boolean') {
+                return 'required|boolean';
+            }else {
                 return 'required';
             }
         })->toJson();
@@ -182,7 +184,7 @@ class CrudCommand extends Command
      */
     private function appendRuleToRequests($modelName, $rules)
     {
-        foreach (['Create', 'Update'] as $action) {
+        foreach (['Create', 'Update','Store'] as $action) {
             $requestName = "{$action}{$modelName}Request";
             $requestFile = app_path("Http/Requests/{$requestName}.php");
             $requestContent = file_get_contents($requestFile);
