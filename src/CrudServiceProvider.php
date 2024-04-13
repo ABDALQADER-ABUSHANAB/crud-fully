@@ -1,19 +1,12 @@
 <?php
 
-namespace abdalqader\CrudCommand;
+namespace abdalqader\crudcommand;
 
 use Illuminate\Support\ServiceProvider;
-use abdalqader\CrudCommand\Commands\CrudCommand;
+use abdalqader\crudcommand\Commands\CrudCommand;
 
 class CrudServiceProvider extends ServiceProvider
 {
-    /**
-     * Register services.
-     */
-public function register()
-{
-     
-}
 
     /**
      * Bootstrap services.
