@@ -20,7 +20,8 @@
     "extra": {
     "laravel": {
         "providers": [
-            "Your\\Package\\Namespace\\YourServiceProvider"
+           "abdalqader\\crudcommand\\src\\";
+
         ]
     }
 }
