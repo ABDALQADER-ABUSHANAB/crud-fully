@@ -1,6 +1,6 @@
 <?php
 
-namespace abdalqader\Modules;
+namespace abdalqader\crudcommand;
 
 use Countable;
 use Illuminate\Cache\CacheManager;
@@ -10,11 +10,11 @@ use Illuminate\Contracts\Routing\UrlGenerator;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
 use Illuminate\Support\Traits\Macroable;
-use abdalqader\Modules\Contracts\RepositoryInterface;
-use abdalqader\Modules\Exceptions\InvalidAssetPath;
-use abdalqader\Modules\Exceptions\ModuleNotFoundException;
-use abdalqader\Modules\Process\Installer;
-use abdalqader\Modules\Process\Updater;
+use abdalqader\crudcommand\Contracts\RepositoryInterface;
+use abdalqader\crudcommand\Exceptions\InvalidAssetPath;
+use abdalqader\crudcommand\Exceptions\ModuleNotFoundException;
+use abdalqader\crudcommand\Process\Installer;
+use abdalqader\crudcommand\Process\Updater;
 
 abstract class FileRepository implements RepositoryInterface, Countable
 {
@@ -129,7 +129,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
      * @param Container $app
      * @param string $args
      * @param string $path
-     * @return \abdalqader\Modules\Module
+     * @return \abdalqader\crudcommand\Module
      */
     abstract protected function createModule(...$args);
 
@@ -457,7 +457,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
     /**
      * Get module used for cli session.
      * @return string
-     * @throws \abdalqader\Modules\Exceptions\ModuleNotFoundException
+     * @throws \abdalqader\crudcommand\Exceptions\ModuleNotFoundException
      */
     public function getUsedNow(): string
     {
@@ -524,7 +524,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
      * Enabling a specific module.
      * @param string $name
      * @return void
-     * @throws \abdalqader\Modules\Exceptions\ModuleNotFoundException
+     * @throws \abdalqader\crudcommand\Exceptions\ModuleNotFoundException
      */
     public function enable($name)
     {
@@ -535,7 +535,7 @@ abstract class FileRepository implements RepositoryInterface, Countable
      * Disabling a specific module.
      * @param string $name
      * @return void
-     * @throws \abdalqader\Modules\Exceptions\ModuleNotFoundException
+     * @throws \abdalqader\crudcommand\Exceptions\ModuleNotFoundException
      */
     public function disable($name)
     {

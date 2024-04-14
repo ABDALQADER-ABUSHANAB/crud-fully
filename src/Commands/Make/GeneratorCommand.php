@@ -1,10 +1,10 @@
 <?php
 
-namespace abdalqader\Modules\Commands\Make;
+namespace abdalqader\crudcommand\Commands\Make;
 
 use Illuminate\Console\Command;
-use abdalqader\Modules\Exceptions\FileAlreadyExistException;
-use abdalqader\Modules\Generators\FileGenerator;
+use abdalqader\crudcommand\Exceptions\FileAlreadyExistException;
+use abdalqader\crudcommand\Generators\FileGenerator;
 
 abstract class GeneratorCommand extends Command
 {
@@ -80,7 +80,7 @@ abstract class GeneratorCommand extends Command
     /**
      * Get class namespace.
      *
-     * @param \abdalqader\Modules\Module $module
+     * @param \abdalqader\crudcommand\Module $module
      *
      * @return string
      */

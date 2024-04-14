@@ -1,9 +1,9 @@
 <?php
 
-namespace abdalqader\Modules\Commands;
+namespace abdalqader\crudcommand\Commands;
 
 use Illuminate\Console\Command;
-use abdalqader\Modules\Traits\ModuleCommandTrait;
+use abdalqader\crudcommand\Traits\ModuleCommandTrait;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 

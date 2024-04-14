@@ -1,9 +1,9 @@
 <?php
 
-namespace abdalqader\Modules\Commands\Database;
+namespace abdalqader\crudcommand\Commands\Database;
 
-use abdalqader\Modules\Commands\BaseCommand;
-use abdalqader\Modules\Migrations\Migrator;
+use abdalqader\crudcommand\Commands\BaseCommand;
+use abdalqader\crudcommand\Migrations\Migrator;
 use Symfony\Component\Console\Input\InputOption;
 
 class MigrateStatusCommand extends BaseCommand
@@ -23,7 +23,7 @@ class MigrateStatusCommand extends BaseCommand
     protected $description = 'Status for all module migrations';
 
     /**
-     * @var \abdalqader\Modules\Contracts\RepositoryInterface
+     * @var \abdalqader\crudcommand\Contracts\RepositoryInterface
      */
     protected $module;
 

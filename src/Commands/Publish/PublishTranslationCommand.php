@@ -1,9 +1,9 @@
 <?php
 
-namespace abdalqader\Modules\Commands\Publish;
+namespace abdalqader\crudcommand\Commands\Publish;
 
-use abdalqader\Modules\Commands\BaseCommand;
-use abdalqader\Modules\Publishing\LangPublisher;
+use abdalqader\crudcommand\Commands\BaseCommand;
+use abdalqader\crudcommand\Publishing\LangPublisher;
 
 class PublishTranslationCommand extends BaseCommand
 {

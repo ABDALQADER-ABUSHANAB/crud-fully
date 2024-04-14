@@ -1,6 +1,6 @@
 <?php
 
-namespace abdalqader\Modules\Support\Migrations;
+namespace abdalqader\crudcommand\Support\Migrations;
 
 class NameParser
 {

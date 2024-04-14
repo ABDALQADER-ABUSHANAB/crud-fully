@@ -1,6 +1,6 @@
 <?php
 
-namespace abdalqader\Modules\Commands\Actions;
+namespace abdalqader\crudcommand\Commands\Actions;
 
 use Illuminate\Contracts\Console\PromptsForMissingInput;
 use Illuminate\Database\Console\PruneCommand;
@@ -10,7 +10,7 @@ use InvalidArgumentException;
 
 use function Laravel\Prompts\multiselect;
 
-use abdalqader\Modules\Facades\Module;
+use abdalqader\crudcommand\Facades\Module;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Finder\Finder;

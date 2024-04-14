@@ -1,12 +1,12 @@
 <?php
 
-namespace abdalqader\Modules;
+namespace abdalqader\crudcommand;
 
 use Composer\InstalledVersions;
 use Illuminate\Foundation\Console\AboutCommand;
-use abdalqader\Modules\Contracts\RepositoryInterface;
-use abdalqader\Modules\Exceptions\InvalidActivatorClass;
-use abdalqader\Modules\Support\Stub;
+use abdalqader\crudcommand\Contracts\RepositoryInterface;
+use abdalqader\crudcommand\Exceptions\InvalidActivatorClass;
+use abdalqader\crudcommand\Support\Stub;
 
 class LaravelModulesServiceProvider extends ModulesServiceProvider
 {

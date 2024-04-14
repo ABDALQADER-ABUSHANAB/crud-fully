@@ -1,9 +1,9 @@
 <?php
 
-namespace abdalqader\Modules\Commands\Publish;
+namespace abdalqader\crudcommand\Commands\Publish;
 
 use Illuminate\Support\Str;
-use abdalqader\Modules\Commands\BaseCommand;
+use abdalqader\crudcommand\Commands\BaseCommand;
 use Symfony\Component\Console\Input\InputOption;
 
 class PublishConfigurationCommand extends BaseCommand

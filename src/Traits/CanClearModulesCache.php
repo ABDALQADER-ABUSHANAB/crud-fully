@@ -1,6 +1,6 @@
 <?php
 
-namespace abdalqader\Modules\Traits;
+namespace abdalqader\crudcommand\Traits;
 
 trait CanClearModulesCache
 {

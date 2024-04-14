@@ -1,11 +1,11 @@
 <?php
 
-namespace abdalqader\Modules\Publishing;
+namespace abdalqader\crudcommand\Publishing;
 
 use Illuminate\Console\Command;
-use abdalqader\Modules\Contracts\PublisherInterface;
-use abdalqader\Modules\Contracts\RepositoryInterface;
-use abdalqader\Modules\Module;
+use abdalqader\crudcommand\Contracts\PublisherInterface;
+use abdalqader\crudcommand\Contracts\RepositoryInterface;
+use abdalqader\crudcommand\Module;
 
 abstract class Publisher implements PublisherInterface
 {
@@ -87,7 +87,7 @@ abstract class Publisher implements PublisherInterface
     /**
      * Get module instance.
      *
-     * @return \abdalqader\Modules\Module
+     * @return \abdalqader\crudcommand\Module
      */
     public function getModule()
     {

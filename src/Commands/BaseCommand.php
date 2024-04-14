@@ -1,6 +1,6 @@
 <?php
 
-namespace abdalqader\Modules\Commands;
+namespace abdalqader\crudcommand\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Console\PromptsForMissingInput;
@@ -94,7 +94,7 @@ abstract class BaseCommand extends Command implements PromptsForMissingInput
 
     protected function getModuleModel($name)
     {
-        return $name instanceof \abdalqader\Modules\Module
+        return $name instanceof \abdalqader\crudcommand\Module
             ? $name
             : $this->laravel['modules']->findOrFail($name);
     }

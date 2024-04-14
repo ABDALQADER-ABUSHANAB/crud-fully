@@ -1,9 +1,9 @@
 <?php
 
-namespace abdalqader\Modules\Commands\Actions;
+namespace abdalqader\crudcommand\Commands\Actions;
 
 use Illuminate\Support\Collection;
-use abdalqader\Modules\Commands\BaseCommand;
+use abdalqader\crudcommand\Commands\BaseCommand;
 
 class CheckLangCommand extends BaseCommand
 {

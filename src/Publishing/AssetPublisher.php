@@ -1,8 +1,8 @@
 <?php
 
-namespace abdalqader\Modules\Publishing;
+namespace abdalqader\crudcommand\Publishing;
 
-use abdalqader\Modules\Support\Config\GenerateConfigReader;
+use abdalqader\crudcommand\Support\Config\GenerateConfigReader;
 
 class AssetPublisher extends Publisher
 {

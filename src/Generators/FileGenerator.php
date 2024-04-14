@@ -1,9 +1,9 @@
 <?php
 
-namespace abdalqader\Modules\Generators;
+namespace abdalqader\crudcommand\Generators;
 
 use Illuminate\Filesystem\Filesystem;
-use abdalqader\Modules\Exceptions\FileAlreadyExistException;
+use abdalqader\crudcommand\Exceptions\FileAlreadyExistException;
 
 class FileGenerator extends Generator
 {

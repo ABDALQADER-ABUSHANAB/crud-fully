@@ -1,8 +1,8 @@
 <?php
 
-namespace abdalqader\Modules\Lumen;
+namespace abdalqader\crudcommand\Lumen;
 
-use abdalqader\Modules\FileRepository;
+use abdalqader\crudcommand\FileRepository;
 
 class LumenFileRepository extends FileRepository
 {

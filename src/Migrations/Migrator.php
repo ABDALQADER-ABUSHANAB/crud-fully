@@ -1,12 +1,12 @@
 <?php
 
-namespace abdalqader\Modules\Migrations;
+namespace abdalqader\crudcommand\Migrations;
 
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use abdalqader\Modules\Module;
-use abdalqader\Modules\Support\Config\GenerateConfigReader;
+use abdalqader\crudcommand\Module;
+use abdalqader\crudcommand\Support\Config\GenerateConfigReader;
 
 class Migrator
 {

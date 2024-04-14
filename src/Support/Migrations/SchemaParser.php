@@ -1,6 +1,6 @@
 <?php
 
-namespace abdalqader\Modules\Support\Migrations;
+namespace abdalqader\crudcommand\Support\Migrations;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Arr;

@@ -1,9 +1,9 @@
 <?php
 
-namespace abdalqader\Modules\Lumen;
+namespace abdalqader\crudcommand\Lumen;
 
 use Illuminate\Support\Str;
-use abdalqader\Modules\Module as BaseModule;
+use abdalqader\crudcommand\Module as BaseModule;
 
 class Module extends BaseModule
 {

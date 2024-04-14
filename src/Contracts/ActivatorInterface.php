@@ -1,8 +1,8 @@
 <?php
 
-namespace abdalqader\Modules\Contracts;
+namespace abdalqader\crudcommand\Contracts;
 
-use abdalqader\Modules\Module;
+use abdalqader\crudcommand\Module;
 
 interface ActivatorInterface
 {

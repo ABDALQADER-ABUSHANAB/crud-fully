@@ -1,10 +1,10 @@
 <?php
 
-namespace abdalqader\Modules\Providers;
+namespace abdalqader\crudcommand\Providers;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\ServiceProvider;
-use abdalqader\Modules\Commands;
+use abdalqader\crudcommand\Commands;
 
 class ConsoleServiceProvider extends ServiceProvider
 {

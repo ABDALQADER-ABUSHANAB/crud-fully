@@ -1,6 +1,6 @@
 <?php
 
-namespace abdalqader\Modules\Commands\Actions;
+namespace abdalqader\crudcommand\Commands\Actions;
 
 use Illuminate\Database\Console\ShowModelCommand;
 use Symfony\Component\Console\Attribute\AsCommand;

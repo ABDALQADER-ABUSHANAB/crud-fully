@@ -1,8 +1,8 @@
 <?php
 
-namespace abdalqader\Modules\Publishing;
+namespace abdalqader\crudcommand\Publishing;
 
-use abdalqader\Modules\Migrations\Migrator;
+use abdalqader\crudcommand\Migrations\Migrator;
 
 class MigrationPublisher extends AssetPublisher
 {

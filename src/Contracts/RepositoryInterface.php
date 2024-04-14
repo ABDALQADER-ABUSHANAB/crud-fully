@@ -1,9 +1,9 @@
 <?php
 
-namespace abdalqader\Modules\Contracts;
+namespace abdalqader\crudcommand\Contracts;
 
-use abdalqader\Modules\Exceptions\ModuleNotFoundException;
-use abdalqader\Modules\Module;
+use abdalqader\crudcommand\Exceptions\ModuleNotFoundException;
+use abdalqader\crudcommand\Module;
 
 interface RepositoryInterface
 {
@@ -31,7 +31,7 @@ interface RepositoryInterface
     /**
      * Get modules as modules collection instance.
      *
-     * @return \abdalqader\Modules\Collection
+     * @return \abdalqader\crudcommand\Collection
      */
     public function toCollection();
 
@@ -141,7 +141,7 @@ interface RepositoryInterface
      * Delete a specific module.
      * @param string $module
      * @return bool
-     * @throws \abdalqader\Modules\Exceptions\ModuleNotFoundException
+     * @throws \abdalqader\crudcommand\Exceptions\ModuleNotFoundException
      */
     public function delete(string $module): bool;
 

@@ -1,7 +1,7 @@
 <?php
 
-use abdalqader\Modules\Activators\FileActivator;
-use abdalqader\Modules\Providers\ConsoleServiceProvider;
+use abdalqader\crudcommand\Activators\FileActivator;
+use abdalqader\crudcommand\Providers\ConsoleServiceProvider;
 
 return [
 
@@ -25,7 +25,7 @@ return [
     */
     'stubs' => [
         'enabled' => false,
-        'path' => base_path('vendor/abdalqader/laravel-modules/src/Commands/stubs'),
+        'path' => base_path('vendor/abdalqader/module-crud/src/Commands/stubs'),
         'files' => [
             'routes/web' => 'routes/web.php',
             'routes/api' => 'routes/api.php',

@@ -1,8 +1,8 @@
 <?php
 
-namespace abdalqader\Modules\Process;
+namespace abdalqader\crudcommand\Process;
 
-use abdalqader\Modules\Module;
+use abdalqader\crudcommand\Module;
 
 class Updater extends Runner
 {

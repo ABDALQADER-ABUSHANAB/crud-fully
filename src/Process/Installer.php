@@ -1,10 +1,10 @@
 <?php
 
-namespace abdalqader\Modules\Process;
+namespace abdalqader\crudcommand\Process;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
-use abdalqader\Modules\Contracts\RepositoryInterface;
+use abdalqader\crudcommand\Contracts\RepositoryInterface;
 use Symfony\Component\Process\Process;
 
 class Installer
@@ -25,7 +25,7 @@ class Installer
 
     /**
      * The module repository instance.
-     * @var \abdalqader\Modules\Contracts\RepositoryInterface
+     * @var \abdalqader\crudcommand\Contracts\RepositoryInterface
      */
     protected $repository;
 
@@ -90,7 +90,7 @@ class Installer
 
     /**
      * Set the module repository instance.
-     * @param \abdalqader\Modules\Contracts\RepositoryInterface $repository
+     * @param \abdalqader\crudcommand\Contracts\RepositoryInterface $repository
      * @return $this
      */
     public function setRepository(RepositoryInterface $repository)

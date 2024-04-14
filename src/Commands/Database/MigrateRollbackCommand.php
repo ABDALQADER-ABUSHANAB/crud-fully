@@ -1,10 +1,10 @@
 <?php
 
-namespace abdalqader\Modules\Commands\Database;
+namespace abdalqader\crudcommand\Commands\Database;
 
-use abdalqader\Modules\Commands\BaseCommand;
-use abdalqader\Modules\Migrations\Migrator;
-use abdalqader\Modules\Traits\MigrationLoaderTrait;
+use abdalqader\crudcommand\Commands\BaseCommand;
+use abdalqader\crudcommand\Migrations\Migrator;
+use abdalqader\crudcommand\Traits\MigrationLoaderTrait;
 use Symfony\Component\Console\Input\InputOption;
 
 class MigrateRollbackCommand extends BaseCommand

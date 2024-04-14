@@ -1,9 +1,9 @@
 <?php
 
-namespace abdalqader\Modules\Commands\Actions;
+namespace abdalqader\crudcommand\Commands\Actions;
 
 use Illuminate\Console\Command;
-use abdalqader\Modules\Module;
+use abdalqader\crudcommand\Module;
 use Symfony\Component\Console\Input\InputOption;
 
 class ListCommand extends Command

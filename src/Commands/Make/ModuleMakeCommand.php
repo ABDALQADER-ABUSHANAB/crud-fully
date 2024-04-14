@@ -1,11 +1,11 @@
 <?php
 
-namespace abdalqader\Modules\Commands\Make;
+namespace abdalqader\crudcommand\Commands\Make;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Process;
-use abdalqader\Modules\Contracts\ActivatorInterface;
-use abdalqader\Modules\Generators\ModuleGenerator;
+use abdalqader\crudcommand\Contracts\ActivatorInterface;
+use abdalqader\crudcommand\Generators\ModuleGenerator;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 

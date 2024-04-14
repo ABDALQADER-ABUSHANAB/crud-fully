@@ -1,9 +1,9 @@
 <?php
 
-namespace abdalqader\Modules\Commands\Publish;
+namespace abdalqader\crudcommand\Commands\Publish;
 
-use abdalqader\Modules\Commands\BaseCommand;
-use abdalqader\Modules\Publishing\AssetPublisher;
+use abdalqader\crudcommand\Commands\BaseCommand;
+use abdalqader\crudcommand\Publishing\AssetPublisher;
 
 class PublishCommand extends BaseCommand
 {

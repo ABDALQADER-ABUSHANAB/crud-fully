@@ -1,8 +1,8 @@
 <?php
 
-namespace abdalqader\Modules\Commands\Database;
+namespace abdalqader\crudcommand\Commands\Database;
 
-use abdalqader\Modules\Commands\BaseCommand;
+use abdalqader\crudcommand\Commands\BaseCommand;
 use Symfony\Component\Console\Input\InputOption;
 
 class MigrateRefreshCommand extends BaseCommand

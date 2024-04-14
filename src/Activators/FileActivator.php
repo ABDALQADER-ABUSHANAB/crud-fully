@@ -1,14 +1,14 @@
 <?php
 
-namespace abdalqader\Modules\Activators;
+namespace abdalqader\crudcommand\Activators;
 
 use Illuminate\Cache\CacheManager;
 use Illuminate\Config\Repository as Config;
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Filesystem\Filesystem;
-use abdalqader\Modules\Contracts\ActivatorInterface;
-use abdalqader\Modules\Module;
+use abdalqader\crudcommand\Contracts\ActivatorInterface;
+use abdalqader\crudcommand\Module;
 
 class FileActivator implements ActivatorInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace abdalqader\Modules\Support\Config;
+namespace abdalqader\crudcommand\Support\Config;
 
 class GenerateConfigReader
 {

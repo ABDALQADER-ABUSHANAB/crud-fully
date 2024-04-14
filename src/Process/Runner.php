@@ -1,9 +1,9 @@
 <?php
 
-namespace abdalqader\Modules\Process;
+namespace abdalqader\crudcommand\Process;
 
-use abdalqader\Modules\Contracts\RepositoryInterface;
-use abdalqader\Modules\Contracts\RunableInterface;
+use abdalqader\crudcommand\Contracts\RepositoryInterface;
+use abdalqader\crudcommand\Contracts\RunableInterface;
 
 class Runner implements RunableInterface
 {

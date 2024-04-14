@@ -1,8 +1,8 @@
 <?php
 
-namespace abdalqader\Modules\Laravel;
+namespace abdalqader\crudcommand\Laravel;
 
-use abdalqader\Modules\FileRepository;
+use abdalqader\crudcommand\FileRepository;
 
 class LaravelFileRepository extends FileRepository
 {

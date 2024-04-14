@@ -1,6 +1,6 @@
 <?php
 
-namespace abdalqader\Modules;
+namespace abdalqader\crudcommand;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Collection as BaseCollection;

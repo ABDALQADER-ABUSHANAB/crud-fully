@@ -1,10 +1,10 @@
 <?php
 
-namespace abdalqader\Modules\Commands\Make;
+namespace abdalqader\crudcommand\Commands\Make;
 
-use abdalqader\Modules\Support\Config\GenerateConfigReader;
-use abdalqader\Modules\Support\Stub;
-use abdalqader\Modules\Traits\ModuleCommandTrait;
+use abdalqader\crudcommand\Support\Config\GenerateConfigReader;
+use abdalqader\crudcommand\Support\Stub;
+use abdalqader\crudcommand\Traits\ModuleCommandTrait;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace abdalqader\Modules;
+namespace abdalqader\crudcommand;
 
 use Illuminate\Filesystem\Filesystem;
-use abdalqader\Modules\Exceptions\InvalidJsonException;
+use abdalqader\crudcommand\Exceptions\InvalidJsonException;
 
 class Json
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace abdalqader\Modules;
+namespace abdalqader\crudcommand;
 
 use Illuminate\Cache\CacheManager;
 use Illuminate\Container\Container;
@@ -9,7 +9,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Illuminate\Support\Traits\Macroable;
 use Illuminate\Translation\Translator;
-use abdalqader\Modules\Contracts\ActivatorInterface;
+use abdalqader\crudcommand\Contracts\ActivatorInterface;
 
 abstract class Module
 {

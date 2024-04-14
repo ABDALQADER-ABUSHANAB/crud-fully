@@ -1,6 +1,6 @@
 <?php
 
-namespace abdalqader\Modules\Generators;
+namespace abdalqader\crudcommand\Generators;
 
 abstract class Generator
 {

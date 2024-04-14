@@ -1,6 +1,6 @@
 <?php
 
-namespace abdalqader\Modules\Routing;
+namespace abdalqader\crudcommand\Routing;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;

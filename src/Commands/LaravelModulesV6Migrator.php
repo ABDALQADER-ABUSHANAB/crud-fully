@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace abdalqader\Modules\Commands;
+namespace abdalqader\crudcommand\Commands;
 
 use Illuminate\Console\Command;
-use abdalqader\Modules\Contracts\RepositoryInterface;
-use abdalqader\Modules\Module;
+use abdalqader\crudcommand\Contracts\RepositoryInterface;
+use abdalqader\crudcommand\Module;
 
 class LaravelModulesV6Migrator extends Command
 {

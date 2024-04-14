@@ -1,10 +1,10 @@
 <?php
 
-namespace abdalqader\Modules\Commands\Actions;
+namespace abdalqader\crudcommand\Commands\Actions;
 
 use Illuminate\Console\Command;
-use abdalqader\Modules\Json;
-use abdalqader\Modules\Process\Installer;
+use abdalqader\crudcommand\Json;
+use abdalqader\crudcommand\Process\Installer;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 

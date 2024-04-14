@@ -1,10 +1,10 @@
 <?php
 
-namespace abdalqader\Modules\Providers;
+namespace abdalqader\crudcommand\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use abdalqader\Modules\Contracts\RepositoryInterface;
-use abdalqader\Modules\Laravel\LaravelFileRepository;
+use abdalqader\crudcommand\Contracts\RepositoryInterface;
+use abdalqader\crudcommand\Laravel\LaravelFileRepository;
 
 class ContractsServiceProvider extends ServiceProvider
 {

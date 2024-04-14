@@ -1,10 +1,10 @@
 <?php
 
-namespace abdalqader\Modules\Commands\Publish;
+namespace abdalqader\crudcommand\Commands\Publish;
 
-use abdalqader\Modules\Commands\BaseCommand;
-use abdalqader\Modules\Migrations\Migrator;
-use abdalqader\Modules\Publishing\MigrationPublisher;
+use abdalqader\crudcommand\Commands\BaseCommand;
+use abdalqader\crudcommand\Migrations\Migrator;
+use abdalqader\crudcommand\Publishing\MigrationPublisher;
 
 class PublishMigrationCommand extends BaseCommand
 {

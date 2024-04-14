@@ -1,6 +1,6 @@
 <?php
 
-namespace abdalqader\Modules\Support;
+namespace abdalqader\crudcommand\Support;
 
 class Stub
 {

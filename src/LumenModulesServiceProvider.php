@@ -1,8 +1,8 @@
 <?php
 
-namespace abdalqader\Modules;
+namespace abdalqader\crudcommand;
 
-use abdalqader\Modules\Support\Stub;
+use abdalqader\crudcommand\Support\Stub;
 
 class LumenModulesServiceProvider extends ModulesServiceProvider
 {

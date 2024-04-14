@@ -1,12 +1,12 @@
 <?php
 
-namespace abdalqader\Modules\Laravel;
+namespace abdalqader\crudcommand\Laravel;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Foundation\ProviderRepository;
 use Illuminate\Support\Str;
-use abdalqader\Modules\Module as BaseModule;
+use abdalqader\crudcommand\Module as BaseModule;
 
 class Module extends BaseModule
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace abdalqader\Modules;
+namespace abdalqader\crudcommand;
 
 use Illuminate\Support\ServiceProvider;
-use abdalqader\Modules\Providers\BootstrapServiceProvider;
-use abdalqader\Modules\Providers\ConsoleServiceProvider;
-use abdalqader\Modules\Providers\ContractsServiceProvider;
+use abdalqader\crudcommand\Providers\BootstrapServiceProvider;
+use abdalqader\crudcommand\Providers\ConsoleServiceProvider;
+use abdalqader\crudcommand\Providers\ContractsServiceProvider;
 
 abstract class ModulesServiceProvider extends ServiceProvider
 {

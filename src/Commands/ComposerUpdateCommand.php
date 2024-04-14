@@ -1,6 +1,6 @@
 <?php
 
-namespace abdalqader\Modules\Commands;
+namespace abdalqader\crudcommand\Commands;
 
 use Illuminate\Support\Facades\File;
 

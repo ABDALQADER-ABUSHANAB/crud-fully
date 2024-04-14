@@ -1,6 +1,6 @@
 <?php
 
-namespace abdalqader\Modules\Contracts;
+namespace abdalqader\crudcommand\Contracts;
 
 interface RunableInterface
 {

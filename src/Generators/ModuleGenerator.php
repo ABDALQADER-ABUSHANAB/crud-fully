@@ -1,15 +1,15 @@
 <?php
 
-namespace abdalqader\Modules\Generators;
+namespace abdalqader\crudcommand\Generators;
 
 use Illuminate\Config\Repository as Config;
 use Illuminate\Console\Command as Console;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
-use abdalqader\Modules\Contracts\ActivatorInterface;
-use abdalqader\Modules\FileRepository;
-use abdalqader\Modules\Support\Config\GenerateConfigReader;
-use abdalqader\Modules\Support\Stub;
+use abdalqader\crudcommand\Contracts\ActivatorInterface;
+use abdalqader\crudcommand\FileRepository;
+use abdalqader\crudcommand\Support\Config\GenerateConfigReader;
+use abdalqader\crudcommand\Support\Stub;
 
 class ModuleGenerator extends Generator
 {
@@ -58,7 +58,7 @@ class ModuleGenerator extends Generator
     /**
      * The module instance.
      *
-     * @var \abdalqader\Modules\Module
+     * @var \abdalqader\crudcommand\Module
      */
     protected $module;
 
@@ -268,7 +268,7 @@ class ModuleGenerator extends Generator
     /**
      * Get the module instance.
      *
-     * @return \abdalqader\Modules\Module
+     * @return \abdalqader\crudcommand\Module
      */
     public function getModule()
     {

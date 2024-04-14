@@ -1,6 +1,6 @@
 <?php
 
-namespace abdalqader\Modules\Exceptions;
+namespace abdalqader\crudcommand\Exceptions;
 
 class ModuleNotFoundException extends \Exception
 {

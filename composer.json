@@ -1,6 +1,6 @@
 {
-    "name": "abedalqader/crudcommand",
-    "version": "1.0.1",
+    "name": "abedalqader/module-crud",
+    "version": "1.0.5",
     "keywords": [
         "modules",
         "laravel",

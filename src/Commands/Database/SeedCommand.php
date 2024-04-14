@@ -1,15 +1,15 @@
 <?php
 
-namespace abdalqader\Modules\Commands\Database;
+namespace abdalqader\crudcommand\Commands\Database;
 
 use ErrorException;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Support\Str;
-use abdalqader\Modules\Commands\BaseCommand;
-use abdalqader\Modules\Contracts\RepositoryInterface;
-use abdalqader\Modules\Module;
-use abdalqader\Modules\Support\Config\GenerateConfigReader;
-use abdalqader\Modules\Traits\ModuleCommandTrait;
+use abdalqader\crudcommand\Commands\BaseCommand;
+use abdalqader\crudcommand\Contracts\RepositoryInterface;
+use abdalqader\crudcommand\Module;
+use abdalqader\crudcommand\Support\Config\GenerateConfigReader;
+use abdalqader\crudcommand\Traits\ModuleCommandTrait;
 use RuntimeException;
 use Symfony\Component\Console\Input\InputOption;
 
