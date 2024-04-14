@@ -22,8 +22,8 @@
     },
     "autoload-dev": {
       "psr-4": {
-        "abdalqader\\Modules\\Tests\\": "tests",
-        "Modules\\Recipe\\": "tests/stubs/valid/Recipe"
+        "abdalqader\\crudcommand\\Tests\\": "tests",
+        "crudcommand\\Recipe\\": "tests/stubs/valid/Recipe"
       }
     },
     "authors": [
@@ -54,10 +54,10 @@
     "laravel": {
         "providers": [
           "abdalqader\\crudcommand\\CrudServiceProvider",
-          "abdalqader\\Modules\\LaravelModulesServiceProvider"
+          "abdalqader\\crudcommand\\LaravelModulesServiceProvider"
         ],
         "aliases": {
-          "Module": "abdalqader\\Modules\\Facades\\Module"
+          "Module": "abdalqader\\crudcommand\\Facades\\Module"
         }
       },
       "branch-alias": {
