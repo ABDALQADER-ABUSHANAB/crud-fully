@@ -1,15 +1,31 @@
 {
     "name": "abedalqader/crudcommand",
     "version": "1.0.5",
-
+    "keywords": [
+        "modules",
+        "laravel",
+        "abdalqader",
+        "module",
+        "rad",
+        "crud"
+      ],
     "description": "package create crud with all depancis and fullit with data",
     "type": "library",
     "license": "MIT",
 "autoload": {
     "psr-4": {
         "abdalqader\\crudcommand\\": "src/"
-    }
-},
+    },
+    "files": [
+        "src/helpers.php"
+      ]
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "abdalqader\\Modules\\Tests\\": "tests",
+        "Modules\\Recipe\\": "tests/stubs/valid/Recipe"
+      }
+    },
     "authors": [
         {
             "name": "abood",
@@ -17,16 +33,49 @@
         }
     ],
     "minimum-stability": "dev",
+
     "require": {
-    },
+        "php": ">=8.2",
+        "ext-json": "*",
+        "wikimedia/composer-merge-plugin": "^2.1"
+      },
+      "require-dev": {
+        "phpunit/phpunit": "^11.0",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^v9.0",
+        "friendsofphp/php-cs-fixer": "^v3.52",
+        "laravel/framework": "^v11.0",
+        "spatie/phpunit-snapshot-assertions": "^5.0",
+        "phpstan/phpstan": "^1.4"
+      },
+
+
     "extra": {
     "laravel": {
         "providers": [
-          "abdalqader\\crudcommand\\CrudServiceProvider"
-
-        ]
-    }
-}
+          "abdalqader\\crudcommand\\CrudServiceProvider",
+          "abdalqader\\Modules\\LaravelModulesServiceProvider"
+        ],
+        "aliases": {
+          "Module": "abdalqader\\Modules\\Facades\\Module"
+        }
+      },
+      "branch-alias": {
+        "dev-master": "11.0-dev"
+      }
+    },
+    "config": {
+      "allow-plugins": {
+        "wikimedia/composer-merge-plugin": true
+      }
+    },
+    "scripts": {
+      "update-snapshots": "./vendor/bin/phpunit --no-coverage -d --update-snapshots",
+      "test": "vendor/bin/phpunit",
+      "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+      "pcf": "vendor/bin/php-cs-fixer fix --verbose"
+    },
+    "prefer-stable": true
 }
 
 

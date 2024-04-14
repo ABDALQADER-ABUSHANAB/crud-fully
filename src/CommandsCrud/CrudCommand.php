@@ -1,6 +1,6 @@
 <?php
 
-namespace abdalqader\crudcommand\Commands;
+namespace abdalqader\crudcommand\CommandsCrud;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
@@ -10,12 +10,15 @@ use function Laravel\Prompts\text;
 
 class CrudCommand extends Command
 {
+    public $path;
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'crud:generate {--modelname= : The name of the model} {--columns= : The columns of the table (comma-separated)}';
+    protected $signature = 'crud:generate {--modelname= : The name of the model}
+     {--columns= : The columns of the table (comma-separated)}
+     {--module= : The name of the module}';
 
     /**
      * The console command description.
@@ -29,6 +32,9 @@ class CrudCommand extends Command
      */
     public function handle()
     {
+        $moudelName ='';
+        $moudelName = text('what is the modelname ,enter to skip');
+        $this->getPath($moudelName);
 
         $modelName = text('what is the modelname' ,
         required: true);
@@ -47,47 +53,62 @@ class CrudCommand extends Command
             ];
         })->toArray();
 
-        //dd($parsedColumns);
-
         // Generate migration file
-        $this->call('make:model', ['name' => $modelName,'--seed' => true]);
+        if($this->path === '') {
 
-        $migrationFileName = $this->getMigrationFileName($modelName);
+            $this->call('make:model', ['name' => $modelName,
+            '--seed' => true,
+            '--path' => $this->path,
+            '--migration' => true,
+            '--factory' => true,
+            '--api' => true,
+            '--all' => true,
+            '--module' => $moudelName,
+            '--table' => strtolower($modelName),
+            '--timestamps' => true,
+            '--fillable' => true,
+            '--create' => strtolower($modelName),
+            '--force' => true,
+            '--module' => $moudelName,]);
+dd('ol');
+            $migrationFileName = $this->getMigrationFileName($modelName);
 
-        if(! $migrationFileName){
-            $this->call('make:migration', [
-                'name' => 'create_' . Str::plural(strtolower($modelName)) . '_table',
-                '--create' => strtolower($modelName),
-                '--table' => strtolower($modelName),
+            if(! $migrationFileName){
+                $this->call('make:migration', [
+                    'name' => 'create_' . Str::plural(strtolower($modelName)) . '_table',
+                    '--create' => strtolower($modelName),
+                    '--table' => strtolower($modelName),
+
+                ]);
+            }
+            // $migrationFileName = $this->getMigrationFileName($modelName);
+
+
+            $this->appendColumnsToMigration($modelName, $parsedColumns);
+
+            $this->call('make:controller', [
+                'name' => $modelName . 'Controller',
+                '--requests'=> true,
+                '--resource'=> true,
+                '--model' => $modelName,
             ]);
+            foreach (['Create', 'Update', 'Store'] as $action) {
+                $requestName = "{$action}{$modelName}Request";
+                $this->call('make:request', [
+                    'name' => $requestName,
+                    '--force' => true
+                ]);
+            }
+            $controllerContent = $this->generateController($modelName,$apiOrBlade);
+            $controllerFile = app_path("Http/Controllers/{$modelName}Controller.php");
+            file_put_contents($controllerFile, $controllerContent);
+            $rules = $this->getRequestRules($columns, $modelName);
+            $this->appendRuleToRequests($modelName, $rules);
+            $this->insertFillableIntoModel($modelName, $columns);
+
+            $this->info('CRUD generated successfully!');
         }
-       // $migrationFileName = $this->getMigrationFileName($modelName);
-
-
-        $this->appendColumnsToMigration($modelName, $parsedColumns);
-
-        $this->call('make:controller', [
-            'name' => $modelName . 'Controller',
-            '--requests'=> true,
-            '--resource'=> true,
-            '--model' => $modelName,
-        ]);
-        foreach (['Create', 'Update', 'Store'] as $action) {
-            $requestName = "{$action}{$modelName}Request";
-            $this->call('make:request', [
-                'name' => $requestName,
-                '--force' => true
-            ]);
         }
-        $controllerContent = $this->generateController($modelName,$apiOrBlade);
-        $controllerFile = app_path("Http/Controllers/{$modelName}Controller.php");
-        file_put_contents($controllerFile, $controllerContent);
-        $rules = $this->getRequestRules($columns, $modelName);
-        $this->appendRuleToRequests($modelName, $rules);
-        $this->insertFillableIntoModel($modelName, $columns);
-
-        $this->info('CRUD generated successfully!');
-    }
     /**
      * Get the migration file name for the given model name.
      */
@@ -351,38 +372,6 @@ class {$modelName}Controller extends Controller
     return $controllerTemplate;
 }
 
-// private function insertFillableIntoModel($modelName, $columnsString)
-// {
-//             // Define the model file path
-//             $modelFilePath = app_path('Models/' . $modelName . '.php');
-
-//             // Read the current content of the model file
-//             $modelContent = file_get_contents($modelFilePath);
-
-//             // Extract column names from the columns string
-//             $columns = collect(explode(',', $columnsString))->map(function ($column) {
-//                 return explode(':', $column)[0];
-//             })->toArray();
-
-//             // Find the position to insert the fillable array
-//             $fillablePosition = strpos($modelContent, 'use HasFactory;');
-
-//             // Calculate the indentation
-//             $indentation = substr($modelContent, $fillablePosition, strpos($modelContent, ']', $fillablePosition) - $fillablePosition);
-
-//             // Define the fillable array as a string
-//             $fillable = $indentation . " use HasFactory;\n   protected \$fillable = [\n" . $indentation . "        '" . implode("',\n" . $indentation . "        '", $columns) . "',\n" . $indentation . "    ];\n";
-
-//             // Insert the fillable array into the model content
-//            // $modelContent = str_replace('use HasFactory;'. $fillable , $fillable, $modelContent);
-//             $modelContent = str_replace('use HasFactory;', $fillable, $modelContent);
-
-//             // Save the modified content back to the model file
-//             file_put_contents($modelFilePath, $modelContent);
-//           //  dd($modelContent,$fillable,$fillablePosition,$indentation);
-//         }
-
-// }
 
 private function insertFillableIntoModel($modelName, $columns)
 {
@@ -419,5 +408,14 @@ private function insertFillableIntoModel($modelName, $columns)
 
     // Save the modified content back to the model file
     file_put_contents($modelFilePath, $modelContent);
+}
+private function getPath($moduleName)
+{
+    // Define the  module path
+    if($moduleName === '' ) {
+        $this->path = '';
+    }else{
+        $this->path = 'Modules/' . $moduleName . '/';
+    }
 }
 }

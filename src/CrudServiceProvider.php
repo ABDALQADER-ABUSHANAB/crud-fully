@@ -3,7 +3,7 @@
 namespace abdalqader\crudcommand;
 
 use Illuminate\Support\ServiceProvider;
-use abdalqader\crudcommand\Commands\CrudCommand;
+use abdalqader\crudcommand\CommandsCrud\CrudCommand;
 
 class CrudServiceProvider extends ServiceProvider
 {
