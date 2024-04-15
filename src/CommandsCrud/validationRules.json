@@ -1,0 +1,15 @@
+{
+    "typeRules": {
+        "string": "required|string|min:8|max:256",
+        "integer": "required|numeric",
+        "int": "required|numeric",
+        "float": "required|numeric",
+        "double": "required|numeric",
+        "date": "required|date",
+        "boolean": "required|boolean"
+    },
+    "nameRules": {
+        "email": "required|email|unique:users,email",
+        "password": "required|string|min:8|confirmed"
+    }
+}
