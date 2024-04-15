@@ -102,7 +102,7 @@ dd('ol');
             $controllerContent = $this->generateController($modelName,$apiOrBlade);
             $controllerFile = app_path("Http/Controllers/{$modelName}Controller.php");
             file_put_contents($controllerFile, $controllerContent);
-            $rules = $this->getRequestRules($columns, $modelName);
+            $rules = $this->getRequestRules($columns);
             $this->appendRuleToRequests($modelName, $rules);
             $this->insertFillableIntoModel($modelName, $columns);
 
@@ -166,40 +166,31 @@ dd('ol');
             //            dd($migrationFile);
         }
     }
-/**
- * Get the validation rules for the given columns.
- */
-    private function getRequestRules($columns, $modelName)
+    /**
+     * Get the validation rules for the given columns.
+     */
+    private function getRequestRules($columns): string
     {
+        // Load validation rules from a configuration file
+        $rulesConfig = json_decode(file_get_contents(__DIR__ . '/validationRules.json'), true);
 
-        //return ('dskdskdnknd');
-        // Ensure $columns is an array
+        // Parse the columns string into an associative array
         $columnsArray = collect(explode(',', $columns))->mapWithKeys(function ($column) {
             [$name, $type] = explode(':', $column);
             return [$name => $type];
         })->toArray();
 
-        $rules = collect($columnsArray)->map(function ($type, $name) {
-            if ($type === 'string') {
-                return 'required|string|min:8|max:256';
-            } elseif ($type === 'integer' || $type === 'int' || $type === 'float' || $type === 'double') {
-                return 'required|numeric';
-            } elseif ($name === 'email') {
-                return 'required|email|unique:users,email';
-            } elseif ($name === 'password') {
-                return 'required|string|min:8|confirmed';
-            } elseif ($type === 'date') {
-                return 'required|date';
-            } elseif ($type === 'boolean') {
-                return 'required|boolean';
-            }else {
-                return 'required';
+        // Use the loaded configuration to assign rules based on type or name
+        return collect($columnsArray)->map(function ($type, $name) use ($rulesConfig) {
+            // Check for specific column names first
+            if (array_key_exists($name, $rulesConfig['nameRules'])) {
+                return $rulesConfig['nameRules'][$name];
             }
+            // Fallback to type-based rules
+            return $rulesConfig['typeRules'][$type] ?? 'required'; // Default to 'required' if no rule is found
         })->toJson();
-
-
-        return $rules;
     }
+
     /**
      * Append validation rules to the requests.
      */
